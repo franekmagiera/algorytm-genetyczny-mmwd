@@ -1,0 +1,9 @@
+TODO:
+ - pobieranie danych wejściowych (np. z pliku, z terminala)
+ - procedura obliczająca wartość funkcji celu
+ - generowanie populacji początkowej danego rozmiaru na podstawie danych
+   wejściowych (wymiary macierzy)
+ - mutacje
+ - selekcja
+ - sukcesja
+
