@@ -1,0 +1,8 @@
+; macierz kosztow transportu
+; macierz kary sasiedztwa
+; liczebnosc poczatkowej populacji 
+; sposob wybierania nastepnego pokolenia - proportional, ranking-linear, ranking-non-linear, tournament, progowa
+; operator krzyzowania - pmx, ox, pmx&ox
+; prawdopodobienstwo mutacji
+; operator mutacji - swap, shift, shuffle
+; Rodzaj sukcesji - elite, clean

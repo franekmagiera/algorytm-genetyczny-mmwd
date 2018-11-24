@@ -1,4 +1,4 @@
-TODO:
+﻿TODO:
  - pobieranie danych wejściowych (np. z pliku, z terminala)
  - procedura obliczająca wartość funkcji celu
  - generowanie populacji początkowej danego rozmiaru na podstawie danych
@@ -6,4 +6,9 @@ TODO:
  - mutacje
  - selekcja
  - sukcesja
+ - class enum dla roznych typow mutacji, selekcji, krzyzowania itp.
+ - glowny program
 
+Pytania:
+ - jak duzy wplyw powinna miec mutacja na gen - czy w szczegolnosci moze np. wystopic inwersja calego genu
+ - czy inwersja moze sie sprowadzic do swapa

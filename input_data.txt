@@ -1,0 +1,8 @@
+transport_cost_matrix.csv; macierz kosztow transportu
+penalty_matrix.csv; macierz kary sasiedztwa
+100; liczebnosc poczatkowej populacji 
+proportional; sposob wybierania nastepnego pokolenia - proportional, ranking-linear, ranking-non-linear, tournament, progowa
+pmx; operator krzyzowania - pmx, ox, pmx&ox
+0.25; prawdopodobienstwo mutacji
+swap; operator mutacji - swap, shift, shuffle
+elite; Rodzaj sukcesji - elite, clean
