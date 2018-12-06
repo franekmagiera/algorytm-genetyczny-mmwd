@@ -1,22 +1,17 @@
 import random
+import numpy as np
 
 def ox_helper_function(parent1, parent2, index_from, index_to):
     """Funkcja pomocnicza do funkcji ox. Powstała, aby uniknąć duplikacji kodu"""
 
-    child = [None for i in range(len(parent1))] 
+    child = np.full(len(parent1), -1)
     child[index_from:index_to] = parent1[index_from:index_to]
-    copy_parent2 = parent2.copy()
-    for index, value in enumerate(copy_parent2):
-        if value in child[index_from:index_to]:
-           copy_parent2[index] = None
-    helper = copy_parent2[index_from-len(copy_parent2):]
-    helper.extend(copy_parent2[:index_from])
-    helper = [x for x in helper if x is not None]
+    helper = [x for x in parent2 if x not in parent1[index_from:index_to]]
     i = 0
-    for index, value in enumerate(child):
-        if value is None:
-           child[index] = helper[i]
-           i += 1
+    for x in np.nditer(child, op_flags=['readwrite']):
+        if x == -1:
+            x[...] = helper[i]
+            i += 1
     return child
 
 def ox(parent1, parent2):
@@ -38,8 +33,8 @@ def ox(parent1, parent2):
     ox_helper_function(parent2, parent1, index_from, index_to))
 
 #
-parent1 = [3,5,1,4,7,6,2,8]
-parent2 = [4,6,5,1,8,3,2,7]
+parent1 = np.array([2,5,8,7,4,1,3,6])
+parent2 = np.array([8,7,2,5,1,4,6,3])
 
 child1, child2 = ox(parent1, parent2)
 

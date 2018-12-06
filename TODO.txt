@@ -1,14 +1,20 @@
 ﻿TODO:
- - pobieranie danych wejściowych (np. z pliku, z terminala)
  - procedura obliczająca wartość funkcji celu
- - generowanie populacji początkowej danego rozmiaru na podstawie danych
-   wejściowych (wymiary macierzy)
- - mutacje
- - selekcja
- - sukcesja
- - class enum dla roznych typow mutacji, selekcji, krzyzowania itp.
- - glowny program
+ - funkcje realizujące selekcję rodziców (np. turniejowa, rankingowa)
+ - funkcje realizujące sukcesję jednego pokolenia na drugie
+ - (metoda katastrofy)
+ - class enum dla różnych typów mutacji, selekcji, sukcesji
+ - wygenerowanie/znalezienie populacji testowej, zapisanie jej do pliku
+ - wczytywanie z pliku konfiguracji do programu głównego
+ - logika programu głównego (algorytm)
+   0. wczytanie konfiguracji algorytmu i danych wejściowych z pliku
+   1. stworzenie/wczytanie populacji początkowej
+   2. wybór rodziców, reprodukcja przy pomocy operatorów OX/PMX
+   3. mutacje potomków (z jakimś prawdopodobieństwem)
+   4. sukcesja - kto przechodzi do następnego pokolenia
+   5. zebranie danych do analizy - najlepsze i najgorsze rozwiązanie w danej iteracji oraz globalnie  
+   6. sprawdzenie warunków stopu - jeśli zachodzą zakończ program i zapisz dane do analizy, w przeciwnym wypadku idź do kroku 2.
+ - analiza danych: wykresy, statystyki
+ - sprawozdanie
 
-Pytania:
- - jak duzy wplyw powinna miec mutacja na gen - czy w szczegolnosci moze np. wystopic inwersja calego genu
- - czy inwersja moze sie sprowadzic do swapa
+ - i ogółem - TESTY

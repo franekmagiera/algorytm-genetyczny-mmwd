@@ -1,4 +1,6 @@
 # skrypt wczytuje dane dla danego problemu z pliku 'input_data'
+import types_definitions
+
 def read_matrix(file_path):
     """Wczytuje macierz zadana w pliku csv"""
 
