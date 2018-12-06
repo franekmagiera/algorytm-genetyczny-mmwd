@@ -7,3 +7,4 @@ pmx; operator krzyzowania - pmx, ox, ox_pmx
 0.3; procentowy wplyw mutacji na rozwiazanie
 swap; operator mutacji - swap, inversion, scramble
 elite; rodzaj sukcesji - elite, clean
+distance_matrix.csv; macierz odleglosci

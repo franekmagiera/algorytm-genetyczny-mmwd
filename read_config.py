@@ -72,6 +72,7 @@ if data[8] == 'elite':
 else:
     succession_method = Succession_type.CLEAN
 
+distance_matrix = read_matrix(data[9])
 
 print(rows) 
 print(columns) 
@@ -84,4 +85,5 @@ print(mutation_probability)
 print(percentage_of_change)
 print(mutation_operator)
 print(succession_method)
+print(distance_matrix)
 
