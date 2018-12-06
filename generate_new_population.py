@@ -1,14 +1,24 @@
 import random
 import numpy as np
 
-def generate_new_population(lower_bound, upper_bound, permutation_length):
+def generate_new_population(population_size, permutation_length):
     """Funkcja generuje macierz ktorej wiersze to permutacje bedace rozwiazaniami naszego problemu.
-    Ilosc wierszy jest losowa i zawiera sie w przedziale od lower_bound do upper_bound.
+    Ilosc wierszy zalezy od parametru population_size.
     Korzystamy z prealokacji w celu przyspieszenia obliczen."""
 
-    size = random.randrange(lower_bound, upper_bound)
-    population = np.zeros((size, permutation_length), int)
-    for i in range(size):
-        population[i] = np.random.permutation(permutation_length)
+    population = np.zeros((population_size, permutation_length), int)
+    for row in range(population_size):
+        population[row] = np.random.permutation(permutation_length)
     return population
+
+
+def save_population_to_file(population, filename):
+    """Funkcja zapisuje populacje population do pliku o nazwie filename."""
+
+    np.savetxt(filename, population, delimiter=';', fmt='%d')
+    return
+
+population = generate_new_population(20,10)
+print(population)
+save_population_to_file(population, 'first_population.csv')
 

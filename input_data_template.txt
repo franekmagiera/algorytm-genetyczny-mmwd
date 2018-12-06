@@ -4,5 +4,6 @@
 ; rodzaj selekcji - proportional, ranking-linear, ranking-non-linear, tournament, progowa
 ; operator krzyzowania - ox, pmx, ox_pmx
 ; prawdopodobienstwo mutacji
+; procentowy wplyw mutacji na rozwiazanie
 ; operator mutacji - swap, inversion, scramble
 ; rodzaj sukcesji - elite, clean

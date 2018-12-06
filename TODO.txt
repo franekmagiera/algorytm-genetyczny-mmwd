@@ -3,8 +3,6 @@
  - funkcje realizujące selekcję rodziców (np. turniejowa, rankingowa)
  - funkcje realizujące sukcesję jednego pokolenia na drugie
  - (metoda katastrofy)
- - class enum dla różnych typów mutacji, selekcji, sukcesji
- - wygenerowanie/znalezienie populacji testowej, zapisanie jej do pliku
  - wczytywanie z pliku konfiguracji do programu głównego
  - logika programu głównego (algorytm)
    0. wczytanie konfiguracji algorytmu i danych wejściowych z pliku

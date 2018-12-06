@@ -1,14 +1,14 @@
 import random
+import numpy as np
 
 def pmx_helper_function(parent1, parent2, index_from, index_to):
     """Funkcja pomocnicza do funkcji pmx. Powstała, aby uniknąć duplikacji kodu."""
 
-    child = [None for i in range(len(parent1))]
-    child[index_from:index_to] = parent2[index_from:index_to]
-    mapping = {x: y for x,y in zip(parent2[index_from:index_to],
-                                    parent1[index_from:index_to])}
-    for index, value in enumerate(parent1):
-        if child[index] is not None:
+    child = np.full(len(parent1), -1)
+    child[index_from:index_to] = parent1[index_from:index_to]
+    mapping = {x: y for x,y in zip(parent1[index_from:index_to], parent2[index_from:index_to])}
+    for index, value in enumerate(parent2):
+        if child[index] != -1:
             continue
         elif value not in child:
             child[index] = value
@@ -18,6 +18,7 @@ def pmx_helper_function(parent1, parent2, index_from, index_to):
                 v = mapping[v]
             child[index] = v
     return child
+
 
 def pmx(parent1, parent2):
     """Funkcja realizująca operator Partially-mapped crossover.
@@ -29,6 +30,7 @@ def pmx(parent1, parent2):
     if len(parent1) != len(parent2):
         raise ValueError("Argumenty powinny być tej samej długości.")
     index_from, index_to = random.sample(range(0, len(parent1)), 2)
+    index_from, index_to = 3,8
     if index_from > index_to:
         index_from, index_to = index_to, index_from
     # zapewnienie nie kopiowania calego rodzica
@@ -41,6 +43,12 @@ def pmx(parent1, parent2):
 parent1 = [1,5,2,8,7,4,3,6]
 parent2 = [4,2,5,8,1,3,6,7]
 
+parent3 = np.array([8,4,7,3,6,2,5,1,9,0])
+parent4 = np.arange(10)
+
 child1, child2 = pmx(parent1,parent2)
 print(child1, child2)
+child3, child4 = pmx(parent3, parent4)
+print(child3, child4)
+print(type(child1))
 
