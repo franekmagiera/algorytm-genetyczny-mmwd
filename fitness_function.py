@@ -21,6 +21,7 @@ def fitness_function(solution, transport_cost_matrix, distance_matrix):
 
 from read_config import transport_cost_matrix, distance_matrix
 
-solution = np.array([3,1,2,0])
-print(fitness_function(solution, transport_cost_matrix, distance_matrix))
+if __name__ == '__main__':
+    solution = np.array([0,1,2,3,4,5,6,7,8])
+    print(fitness_function(solution, transport_cost_matrix, distance_matrix))
 

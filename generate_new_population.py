@@ -18,7 +18,8 @@ def save_population_to_file(population, filename):
     np.savetxt(filename, population, delimiter=';', fmt='%d')
     return
 
-population = generate_new_population(20,10)
-print(population)
-save_population_to_file(population, 'first_population.csv')
+if __name__ == '__main__':
+    population = generate_new_population(10,9)
+    #print(population)
+    save_population_to_file(population, 'first_population.csv')
 

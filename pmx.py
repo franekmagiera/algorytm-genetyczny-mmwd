@@ -30,7 +30,6 @@ def pmx(parent1, parent2):
     if len(parent1) != len(parent2):
         raise ValueError("Argumenty powinny być tej samej długości.")
     index_from, index_to = random.sample(range(0, len(parent1)), 2)
-    index_from, index_to = 3,8
     if index_from > index_to:
         index_from, index_to = index_to, index_from
     # zapewnienie nie kopiowania calego rodzica
@@ -40,15 +39,16 @@ def pmx(parent1, parent2):
     pmx_helper_function(parent2, parent1, index_from, index_to))
     
 #
-parent1 = [1,5,2,8,7,4,3,6]
-parent2 = [4,2,5,8,1,3,6,7]
+if __name__ == '__main__':
+    parent1 = [1,5,2,8,7,4,3,6]
+    parent2 = [4,2,5,8,1,3,6,7]
 
-parent3 = np.array([8,4,7,3,6,2,5,1,9,0])
-parent4 = np.arange(10)
+    parent3 = np.array([8,4,7,3,6,2,5,1,9,0])
+    parent4 = np.arange(10)
 
-child1, child2 = pmx(parent1,parent2)
-print(child1, child2)
-child3, child4 = pmx(parent3, parent4)
-print(child3, child4)
-print(type(child1))
+    child1, child2 = pmx(parent1,parent2)
+    print(child1, child2)
+    child3, child4 = pmx(parent3, parent4)
+    print(child3, child4)
+    print(type(child1))
 

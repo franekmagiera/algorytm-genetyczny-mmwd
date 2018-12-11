@@ -52,14 +52,15 @@ def ox(parent1, parent2):
     ox_helper_function(parent2, parent1, index_from, index_to))
 
 #
-parent1 = np.array([9,8,4,5,6,7,1,3,2,0])
-parent2 = np.array([8,7,1,2,3,0,9,5,4,6])
+if __name__ == '__main__':
+    parent1 = np.array([9,8,4,5,6,7,1,3,2,0])
+    parent2 = np.array([8,7,1,2,3,0,9,5,4,6])
 
-parent3 = np.array([1,2,3,4,5,6,7,8,9])
-parent4 = np.array([5,7,4,9,1,3,6,2,8])
+    parent3 = np.array([1,2,3,4,5,6,7,8,9])
+    parent4 = np.array([5,7,4,9,1,3,6,2,8])
 
-child1, child2 = ox(parent1, parent2)
-child4, child3 = ox(parent3, parent4)
+    child1, child2 = ox(parent1, parent2)
+    child4, child3 = ox(parent3, parent4)
 
-print(child1, child2, child3, child4)
+    print(child1, child2, child3, child4)
 
