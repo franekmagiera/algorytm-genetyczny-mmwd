@@ -1,0 +1,21 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\renewcommand{\contentsname}{Spis treści}
+\author{Franciszek Magiera, Dawid Lech}
+\title{Wykorzystanie algorytmu genetycznego w rozwiązywaniu problemu QAP.}
+\date{09.01.2019}
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Wstęp}
+Naszym zadaniem było znalezienie takiego rozmieszczenia fabryk, znając przepływ materiałów między nimi oraz odległości pomiędzy odpowiednimi miejscami, aby energia potrzebna do transportu materiałów była minimalna. Jest to przypadek NP-trudnego problemu QAP. Rozwiązania problemu poszukiwaliśmy przy pomocy algorytmu genetycznego.
+\section{Model matematyczny}
+Mamy dany zbiór n fabryk oraz n dostępnych na budowę miejsc, które numerujemy od 1 do n. Dana jest również macierz przepływu $n\times n$, której element w i-tej kolumnie i j-tym wierszu oznacza ilość transportowanych materiału z fabryki oznaczonej numerem i do fabryki oznaczonej numerem j oraz symetryczną macierz odległości pomiędzy poszczególnymi miejscami, również o wymiarach $n\times n$, której element w i-tej kolumnie i j-tym wierszu oznacza odległość miejsca oznaczonego numerem i od miejsca oznaczonego numerem j (w obydwu przypadkach $i,j \in [1,n]$). Rozwiązania problemu szukamy w postaci n-elementowej permutacji, gdzie element na i-tym miejscu o wartości j oznacza przyporządkowanie fabryki o j-tym numerze na miejsce o i-tym numerze. Oznaczając macierz przepływu materiałów pomiędzy fabrykami przez W, macierz odległości pomiędzy dostępnymi miejscami przez D oraz permutację będącą rozwiązaniem poprzez s, funkcję celu możemy zapisać w postaci:
+\begin{equation}
+\sum_{i=1}^{n}  \sum_{j=1}^{n}D_{i,j}W_{s(i), s(j)}
+\label{Funkcja celu}
+\end{equation}
+\end{document}
+

@@ -17,7 +17,7 @@ def fitness_function(solution, transport_cost_matrix, distance_matrix):
             # distance = abs(row_j - row_i) + abs(column_j - column_i) # odkomentowac jesli nie bedziemy korzystac z macierzy odleglosci
             distance = distance_matrix[i, j]
             value += transport_cost * distance 
-    return value/2 # aktualnie badamy jedynie symetryczne macierze kosztow, aby porownac z rozwiazaniami w internecie w celu sprawdzenia poprawnosci napisanych funkcji dzielimy wartosc funkcji celu na dwa
+    return value/2 # aktualnie badamy jedynie symetryczne macierze kosztow
 
 from read_config import transport_cost_matrix, distance_matrix
 
