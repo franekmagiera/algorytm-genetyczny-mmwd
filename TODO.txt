@@ -1,18 +1,8 @@
 ﻿TODO:
- - procedura obliczająca wartość funkcji celu
- - funkcje realizujące selekcję rodziców (np. turniejowa, rankingowa)
- - funkcje realizujące sukcesję jednego pokolenia na drugie
- - (metoda katastrofy)
- - wczytywanie z pliku konfiguracji do programu głównego
- - logika programu głównego (algorytm)
-   0. wczytanie konfiguracji algorytmu i danych wejściowych z pliku
-   1. stworzenie/wczytanie populacji początkowej
-   2. wybór rodziców, reprodukcja przy pomocy operatorów OX/PMX
-   3. mutacje potomków (z jakimś prawdopodobieństwem)
-   4. sukcesja - kto przechodzi do następnego pokolenia
-   5. zebranie danych do analizy - najlepsze i najgorsze rozwiązanie w danej iteracji oraz globalnie  
-   6. sprawdzenie warunków stopu - jeśli zachodzą zakończ program i zapisz dane do analizy, w przeciwnym wypadku idź do kroku 2.
- - analiza danych: wykresy, statystyki
+ - selekcja rankingowa
+ - selekcja turniejowa
+ - selekcja truncation
+ - testy i analiza algorytmu dla roznych parametrow
  - sprawozdanie
-
- - i ogółem - TESTY
+ - dokumentacja (README)
+ - ...

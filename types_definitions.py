@@ -1,11 +1,10 @@
 from enum import Enum, auto
 
 class Selection_type(Enum):
-    PROPORTIONAL = auto()
-    RANKING_LINEAR = auto()
-    RANKING_NON_LINEAR = auto()
+    PROPORTIONATE = auto()
+    RANKING = auto()
     TOURNAMENT = auto()
-    THRESHOLD = auto()
+    TRUNCATION = auto()
 
 class Crossover_type(Enum):
     OX = auto()
@@ -14,10 +13,6 @@ class Crossover_type(Enum):
 
 class Mutation_type(Enum):
     SWAP = auto()
-    SHIFT = auto()
-    SHUFFLE = auto()
-
-class Succession_type(Enum):
-    ELITE = auto()
-    CLEAN = auto()
+    INVERSION = auto()
+    SCRAMBLE = auto()
 

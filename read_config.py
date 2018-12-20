@@ -2,7 +2,6 @@
 from types_definitions import Selection_type
 from types_definitions import Crossover_type
 from types_definitions import Mutation_type
-from types_definitions import Succession_type
 import numpy as np
 
 def read_matrix(file_path):
@@ -39,16 +38,14 @@ if len(penalty_matrix) != rows or len(penalty_matrix[0]) != columns:
 
 starting_population = read_matrix(data[2])
 
-if data[3] == 'proportional':
-    selection_method = Selection_type.PROPORTIONAL
-elif data[3] == 'ranking-linear':
-    selection_method = Selection_type.RANKING_LINEAR
-elif data[3] == 'ranking-non-linear':
-    selection_method = Selection_type.RANKING_NON_LINEAR
+if data[3] == 'proportionate':
+    selection_method = Selection_type.PROPORTIONATE
+elif data[3] == 'ranking':
+    selection_method = Selection_type.RANKING
 elif data[3] == 'tournament':
     selection_method = Selection_type.TOURNAMENT
 else:
-    selection_method = Selection_type.THRESHOLD
+    selection_method = Selection_type.TRUNCATION
 
 if data[4] == 'ox':
     crossover_operator = Crossover_type.OX
@@ -62,17 +59,14 @@ percentage_of_change = float(data[6])
 
 if data[7] == 'swap':
     mutation_operator = Mutation_type.SWAP
-elif data[7] == 'shift':
-    mutation_operator = Mutation_type.SHIFT
+elif data[7] == 'inversion':
+    mutation_operator = Mutation_type.INVERSION
 else:
-    mutation_operator = Mutation_type.SHUFFLE
+    mutation_operator = Mutation_type.SCRAMBLE
 
-if data[8] == 'elite':
-    succession_method = Succession_type.ELITE
-else:
-    succession_method = Succession_type.CLEAN
+distance_matrix = read_matrix(data[8])
 
-distance_matrix = read_matrix(data[9])
+iterations_limit = int(data[9])
 
 if __name__ == '__main__':
     print(rows) 
@@ -85,6 +79,6 @@ if __name__ == '__main__':
     print(mutation_probability)
     print(percentage_of_change)
     print(mutation_operator)
-    print(succession_method)
     print(distance_matrix)
+    print(iterations_limit)
 
