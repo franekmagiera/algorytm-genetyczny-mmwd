@@ -1,10 +1,13 @@
 ; macierz kosztow transportu
 ; macierz kary sasiedztwa
 ; poczatkowa populacja
-; rodzaj selekcji - proportionate, ranking, tournament, truncation
+; rodzaj selekcji - proportionate, tournament, truncation
 ; operator krzyzowania - ox, pmx, ox_pmx
 ; prawdopodobienstwo mutacji
 ; procentowy wplyw mutacji na rozwiazanie
 ; operator mutacji - swap, inversion, scramble
 ; macierz odleglosci
 ; limit iteracji
+; ilość rodziców
+; wielkość turnieju
+; procentowy próg rankingowy

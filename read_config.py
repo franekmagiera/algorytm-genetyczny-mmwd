@@ -68,6 +68,12 @@ distance_matrix = read_matrix(data[8])
 
 iterations_limit = int(data[9])
 
+number_of_parents = int(data[10])
+
+tournament_size = int(data[11])
+
+truncation_threshold = int(data[12])
+
 if __name__ == '__main__':
     print(rows) 
     print(columns) 
@@ -81,4 +87,8 @@ if __name__ == '__main__':
     print(mutation_operator)
     print(distance_matrix)
     print(iterations_limit)
+    print(number_of_parents)
+    print(tournament_size)
+    print(truncation_threshold)
+
 
