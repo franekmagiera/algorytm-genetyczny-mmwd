@@ -45,6 +45,7 @@ if __name__ == '__main__':
     worst_solutions = np.zeros((iterations_limit, permutation_size), int)
     global_best_solutions = np.zeros((iterations_limit, permutation_size), int) 
     iterations_counter = 0
+    tolerance = 0
     
     while iterations_counter < iterations_limit:
         # tworzymy nowych potomkow na podstawie poprzedniej populacji
@@ -71,21 +72,28 @@ if __name__ == '__main__':
             global_best_solutions[iterations_counter] = population[best_in_current_iteration]
         else:
             global_best_solutions[iterations_counter] = global_best_solutions[iterations_counter-1]
-        population = children[:30]
+        if fitness_f(best_solutions[iterations_counter]) == fitness_f(global_best_solutions[iterations_counter-1]):
+            tolerance += 1
+        else:
+            tolerance = 0
+        if tolerance == 8:  # TOLERANCE PARAMETER
+            print('Stopping at', iterations_counter, 'iteration.')
+            break
         iterations_counter += 1
+        population = children[:30]
 
-    print(global_best_solutions[iterations_limit-1])
-    print(fitness_f(global_best_solutions[iterations_limit-1]))
+    print('Best solution:', global_best_solutions[iterations_counter-1])
+    print('Best fit. value:', fitness_f(global_best_solutions[iterations_counter-1]))
     best_solutions_values = np.array([fitness_f(best_solutions[i]) for i in range(len(best_solutions))])
     worst_solutions_values = np.array([fitness_f(worst_solutions[i]) for i in range(len(worst_solutions))])
     global_best_solutions_values = np.array([fitness_f(global_best_solutions[i]) for i in range(len(global_best_solutions))])
-    iterations = np.arange(1, iterations_limit+1)
-    plt.plot(iterations, best_solutions_values, 'g', label='W danej iteracji - najlepsze')
-    plt.plot(iterations, worst_solutions_values, 'r', label='W danej iteracji - najgorsze')
-    plt.plot(iterations, global_best_solutions_values, 'b', label='Globalnie najlepsze')
+    iterations = np.arange(1, iterations_counter+1)
+    plt.plot(iterations, best_solutions_values[:iterations_counter], 'g', label='W danej iteracji - najlepsze')
+    plt.plot(iterations, worst_solutions_values[:iterations_counter], 'r', label='W danej iteracji - najgorsze')
+    plt.plot(iterations, global_best_solutions_values[:iterations_counter], 'b--', label='Globalnie najlepsze')
     plt.legend(loc='upper right')
     plt.xlabel('Iteracje')
-    plt.xticks(np.arange(iterations_limit+1))
+    plt.xticks(iterations)
     plt.ylabel('Wartosc funkcji celu')
     plt.title('Przebieg wartosci najlepszych rozwiazan')
     plt.show()

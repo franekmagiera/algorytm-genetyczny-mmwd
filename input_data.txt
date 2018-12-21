@@ -7,7 +7,7 @@ pmx; operator krzyzowania - pmx, ox, ox_pmx
 0.3; procentowy wplyw mutacji na rozwiazanie
 swap; operator mutacji - swap, inversion, scramble
 distance_matrix.csv; macierz odleglosci
-23; limit iteracji
-10; ilość rodziców
+20; limit iteracji
+2; ilość rodziców
 3; wielkość turnieju
 5; procentowy próg rankingowy

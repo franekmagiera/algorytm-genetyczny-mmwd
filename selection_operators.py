@@ -24,8 +24,8 @@ def tournament_selection(population, number_of_parents, tournament_size, truncat
     for i in range(number_of_parents):
         for j in range(0, tournament_size):
             temp_fitness[j] = fitness_function(tournaments[i][j])
-        print(temp_fitness)
-        print(tournaments[i][:])
+        #print(temp_fitness)
+        #print(tournaments[i][:])
         parents[i] = (min(tournaments[i][:], key=fitness_function))
     return parents.astype(int)
 
