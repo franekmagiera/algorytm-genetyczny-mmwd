@@ -10,12 +10,19 @@
 \tableofcontents
 \newpage
 \section{Wstęp}
-Naszym zadaniem było znalezienie takiego rozmieszczenia fabryk, znając przepływ materiałów między nimi oraz odległości pomiędzy odpowiednimi miejscami, aby energia potrzebna do transportu materiałów była minimalna. Jest to przypadek NP-trudnego problemu QAP. Rozwiązania problemu poszukiwaliśmy przy pomocy algorytmu genetycznego.
+Naszym zadaniem było znalezienie takiego rozmieszczenia fabryk, znając przepływ materiałów oraz odległości między nimi, aby energia potrzebna do transportu materiałów była minimalna. Jest to przypadek NP-trudnego problemu QAP. Rozwiązania problemu poszukiwaliśmy przy pomocy algorytmu genetycznego.
 \section{Model matematyczny}
-Mamy dany zbiór n fabryk oraz n dostępnych na budowę miejsc, które numerujemy od 1 do n. Dana jest również macierz przepływu $n\times n$, której element w i-tej kolumnie i j-tym wierszu oznacza ilość transportowanych materiału z fabryki oznaczonej numerem i do fabryki oznaczonej numerem j oraz symetryczną macierz odległości pomiędzy poszczególnymi miejscami, również o wymiarach $n\times n$, której element w i-tej kolumnie i j-tym wierszu oznacza odległość miejsca oznaczonego numerem i od miejsca oznaczonego numerem j (w obydwu przypadkach $i,j \in [1,n]$). Rozwiązania problemu szukamy w postaci n-elementowej permutacji, gdzie element na i-tym miejscu o wartości j oznacza przyporządkowanie fabryki o j-tym numerze na miejsce o i-tym numerze. Oznaczając macierz przepływu materiałów pomiędzy fabrykami przez W, macierz odległości pomiędzy dostępnymi miejscami przez D oraz permutację będącą rozwiązaniem poprzez s, funkcję celu możemy zapisać w postaci:
+Mamy dany zbiór n fabryk oraz n dostępnych na budowę miejsc, które numerujemy od 1 do n. Dana jest również macierz przepływu $n\times n$, której element w i-tej kolumnie i j-tym wierszu oznacza ilość transportowanych materiałów z fabryki oznaczonej numerem i do fabryki oznaczonej numerem j oraz symetryczną macierz odległości pomiędzy poszczególnymi miejscami, również o wymiarach $n\times n$, której element w i-tej kolumnie i j-tym wierszu oznacza odległość miejsca oznaczonego numerem i od miejsca oznaczonego numerem j (w obydwu przypadkach $i,j \in [1,n]$). Rozwiązania problemu szukamy w postaci n-elementowej permutacji, gdzie element na i-tym miejscu o wartości j oznacza przyporządkowanie fabryki o j-tym numerze na miejsce o i-tym numerze. Oznaczając macierz przepływu materiałów pomiędzy fabrykami przez W, macierz odległości pomiędzy dostępnymi miejscami przez D oraz permutację będącą rozwiązaniem poprzez s, funkcję celu możemy zapisać w postaci:
 \begin{equation}
-\sum_{i=1}^{n}  \sum_{j=1}^{n}D_{i,j}W_{s(i), s(j)}
-\label{Funkcja celu}
+F(s) = \sum_{i=1}^{n}  \sum_{j=1}^{n}D_{i,j}W_{s(i), s(j)} \longrightarrow min \label{Funkcja celu}
 \end{equation}
-\end{document}
+W przypadku symetrycznych macierzy przepływu możnaby zmodyfikować powyższą funkcję dzieląc ją przez 2, bądź rozpoczynając drugie sumowanie od j=i do n, co skróciłoby czas potrzebny na obliczenie wartości funkcji celu.
+\section{Opis algorytmu}
+Aby znaleźć optymalne rozwiązanie opisanego problemu, przeszukujemy przestrzeń dopuszczalnych rozwiazań. Korzystamy przy tym z algorytmu genetycznego, należącego do szerszej klasy algorytmów ewolucyjnych. Algorytm genetyczny wymaga odpowiedniej reprezentacji przestrzeni rozwiązań, dla której elementów łatwo jest wykonać proste operacje krzyżowania, mutacji itp. oraz funkcji celu, co sprawia, że dobrze nadaje się do rozwiązania naszego problemu.
 
+Algorytmy genetyczne wykorzystują mechanizmy zainspirowane ewolucją biologiczną takie jak krzyżowanie, mutacja czy selekcja. Przykładowe rozwiązanie problemu można skojarzyć z osobnikiem należącym do populacji (zbioru kilku rozwiązań). Funkcję celu można rozumieć jako miarę przystosowania danego osobnika - determinuje ona jakość rozwiązania. Populacja początkowa jest generowana losowo. Ewolucja populacji zachodzi po wielokrotnym stosowaniu wcześniej wymienionych mechanizmów. W efekcie z każdą generacją uzyskujemy coraz to lepiej przystosowaną populację (składającą sie z osobników o niższych wartościach funkcji celu).
+
+Potencjalnym problemem na jaki można się natknąć wykorzystując algorytm genetyczny jest zbyt szybkie osiąganie jednolitej populacji. Z jednej strony prowadzi to do szybkiego znalezienia rozwiązania, jednak najczęściej jest ono dalekie od optymalnego. Aby uniknąć tego problemu należy zadbać o losowość działania mechanizmów wpływających na populację. Większa losowość algorytmu wpływa na przeszukanie większej części przestrzeni rozwiązań co skutkuje większą szansą na znalezienie dobrego rozwiązania.
+
+Należy również pamiętać, że algorytmy genetyczne to metody przybliżone, co oznacza, że nie mamy pewności co do tego czy znalezione przez nas rozwiązanie jest optymalne, a nawet jeśli takie znaleźliśmy, to nie możemy tego stwierdzić. 
+\end{document}
