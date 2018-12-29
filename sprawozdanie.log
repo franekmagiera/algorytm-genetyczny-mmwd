@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.18)  19 DEC 2018 00:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.18)  29 DEC 2018 19:05
 entering extended mode
 **C:/Users/Franek/Documents/MMWD/sprawozdanie.tex
 (C:/Users/Franek/Documents/MMWD/sprawozdanie.tex
@@ -25,25 +25,63 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
  ("C:\Users\Franek\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (C:/Users/Franek/Documents/MMWD\sprawozdanie.aux)
+))
+("C:\Users\Franek\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst
+.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("C:\Users\Franek\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings
+.sty"
+("C:\Users\Franek\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.s
+ty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\lst@mode=\count88
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count89
+\lst@currlwidth=\dimen103
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen106
+
+("C:\Users\Franek\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.
+sty"
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box27
+)
+("C:\Users\Franek\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings
+.cfg"
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+ (C:/Users/Franek/Documents/MMWD\sprawozdanie.aux)
 \openout1 = `sprawozdanie.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+\c@lstlisting=\count96
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 8.
+(Font)              <14.4> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 8.
+(Font)              <7> on input line 12.
  [1
 
 {C:/Users/Franek/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -52,72 +90,245 @@ No file sprawozdanie.toc.
 \openout3 = `sprawozdanie.toc'.
 
 [2]
-Overfull \hbox (11.80042pt too wide) in paragraph at lines 13--14
-\T1/cmr/m/n/12 Jest to przy-padek NP-trudnego prob-lemu QAP. Rozwi�za-nia prob-
-lemu poszuki-
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 19.
+ [3]
+Underfull \hbox (badness 2237) in paragraph at lines 28--28
+[]\T1/cmr/m/n/12 Czynnikami lim-i-tu-j�-cymi stosowanie al-go-ryt-m�w gene-ty-c
+znych jest
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 15.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
+[4]
 
-! LaTeX Error: \begin{equation} on input line 16 ended by \end{document}.
+! Package inputenc Error: Invalid UTF-8 byte sequence.
 
-See the LaTeX manual or LaTeX Companion for explanation.
+See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \end{document}
-                   
-? q
-OK, entering \batchmode...
-! Missing $ inserted.
-<inserted text> 
-                $
-l.19 \end{document}
-                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+l.32 ... = wygeneruj_losowa_populacje() // bądź 
+                                                  populacja = wczytaj_z_plik...
 
-! Display math should end with $$.
-<to be read again> 
-                   \par 
-l.19 \end{document}
-                   
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+? 
 
- [3] (sprawozdanie.aux) )
-(\end occurred inside a group at level 1)
+! Package inputenc Error: Invalid UTF-8 byte 133.
 
-### semi simple group (level 1) entered at line 16 (\begingroup)
-### bottom level 
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ... = wygeneruj_losowa_populacje() // bądź 
+                                                  populacja = wczytaj_z_plik...
+
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ... = wygeneruj_losowa_populacje() // bądź 
+                                                  populacja = wczytaj_z_plik...
+
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte 186.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ... = wygeneruj_losowa_populacje() // bądź 
+                                                  populacja = wczytaj_z_plik...
+
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...acja = wczytaj_z_pliku(ścieżka_do_pliku)
+                                                  
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte 155.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...acja = wczytaj_z_pliku(ścieżka_do_pliku)
+                                                  
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...acja = wczytaj_z_pliku(ścieżka_do_pliku)
+                                                  
+? 
+
+Overfull \hbox (300.7373pt too wide) in paragraph at lines 32--33
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 [operator_selekcji, operator_krzyżowania,
+                                                prawdopodobieństwo_mutacji,...
+
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte 188.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 [operator_selekcji, operator_krzyżowania,
+                                                prawdopodobieństwo_mutacji,...
+
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...krzyżowania, prawdopodobieństwo_mutacji,
+                                                   operator_mutacji, operato...
+
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte 132.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...krzyżowania, prawdopodobieństwo_mutacji,
+                                                   operator_mutacji, operato...
+
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...i] = wczytaj_parametry(ścieżka_do_pliku)
+                                                  
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte 155.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...i] = wczytaj_parametry(ścieżka_do_pliku)
+                                                  
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...i] = wczytaj_parametry(ścieżka_do_pliku)
+                                                  
+? 
+
+Overfull \hbox (653.1543pt too wide) in paragraph at lines 33--34
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...iecko1, dziecko2] = operator_krzyżowania(
+                                                  rodzice[x], rodzice[y])
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte 188.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...iecko1, dziecko2] = operator_krzyżowania(
+                                                  rodzice[x], rodzice[y])
+? 
+
+Overfull \hbox (202.06055pt too wide) in paragraph at lines 41--42
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (61.09375pt too wide) in paragraph at lines 46--47
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (54.04541pt too wide) in paragraph at lines 47--48
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (117.48047pt too wide) in paragraph at lines 50--51
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[5] (sprawozdanie.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 451 strings out of 492970
- 4576 string characters out of 3126149
- 61631 words of memory out of 3000000
- 4388 multiletter control sequences out of 15000+200000
+ 2087 strings out of 492970
+ 26472 string characters out of 3126149
+ 98552 words of memory out of 3000000
+ 6004 multiletter control sequences out of 15000+200000
  11138 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 22i,6n,19p,891b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Franek\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
-ppen\ec\dpi600\ecbx1728.pk> <C:\Users\Franek\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Franek\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Franek\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Users/Franek/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/U
+ 26i,6n,32p,1070b,1016s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Franek\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecbx1728.pk> <C:\Users\Franek\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecrm1200.pk> <C:\Users\Franek\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Franek\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Users/Franek/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Franek/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/U
 sers/Franek/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb><C:/Users/Franek/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb><C:/Users/Franek/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Franek/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Franek/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on sprawozdanie.pdf (3 pages, 101574 bytes).
+mi8.pfb><C:/Users/Franek/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Users/Franek/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/Franek/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on sprawozdanie.pdf (5 pages, 116596 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
+ 202 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

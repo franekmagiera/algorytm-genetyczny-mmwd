@@ -1,10 +1,14 @@
 \documentclass[12pt]{article}
 \usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{listings}
+\setlength{\parskip}{1em}
 \renewcommand{\contentsname}{Spis treści}
 \author{Franciszek Magiera, Dawid Lech}
 \title{Wykorzystanie algorytmu genetycznego w rozwiązywaniu problemu QAP.}
 \date{09.01.2019}
 \begin{document}
+\sloppy
 \maketitle
 \newpage
 \tableofcontents
@@ -18,11 +22,11 @@ F(s) = \sum_{i=1}^{n}  \sum_{j=1}^{n}D_{i,j}W_{s(i), s(j)} \longrightarrow min \
 \end{equation}
 W przypadku symetrycznych macierzy przepływu możnaby zmodyfikować powyższą funkcję dzieląc ją przez 2, bądź rozpoczynając drugie sumowanie od j=i do n, co skróciłoby czas potrzebny na obliczenie wartości funkcji celu.
 \section{Opis algorytmu}
-Aby znaleźć optymalne rozwiązanie opisanego problemu, przeszukujemy przestrzeń dopuszczalnych rozwiazań. Korzystamy przy tym z algorytmu genetycznego, należącego do szerszej klasy algorytmów ewolucyjnych. Algorytm genetyczny wymaga odpowiedniej reprezentacji przestrzeni rozwiązań, dla której elementów łatwo jest wykonać proste operacje krzyżowania, mutacji itp. oraz funkcji celu, co sprawia, że dobrze nadaje się do rozwiązania naszego problemu.
+Aby znaleźć optymalne rozwiązanie opisanego problemu, przeszukujemy przestrzeń dopuszczalnych rozwiazań. Korzystamy przy tym z algorytmu genetycznego, należącego do szerszej klasy algorytmów ewolucyjnych. Algorytm genetyczny wymaga odpowiedniej reprezentacji przestrzeni rozwiązań, dla której elementów łatwo jest wykonać proste operacje krzyżowania, mutacji itp. oraz funkcji celu, co sprawia, że dobrze nadaje się do rozwiązania naszego problemu. \par
+Algorytmy genetyczne wykorzystują mechanizmy zainspirowane ewolucją biologiczną takie jak krzyżowanie, mutacja czy selekcja. Przykładowe rozwiązanie problemu można skojarzyć z osobnikiem należącym do populacji (zbioru kilku rozwiązań). Funkcję celu można rozumieć jako miarę przystosowania danego osobnika - determinuje ona jakość rozwiązania. Populacja początkowa jest generowana losowo. Ewolucja populacji zachodzi po wielokrotnym stosowaniu wcześniej wymienionych mechanizmów. W efekcie z każdą generacją uzyskujemy coraz to lepiej przystosowaną populację (składającą sie z osobników o niższych wartościach funkcji celu). \par
+Potencjalnym problemem na jaki można się natknąć wykorzystując algorytm genetyczny jest zbyt szybkie osiąganie jednolitej populacji. Z jednej strony prowadzi to do szybkiego znalezienia rozwiązania, jednak najczęściej jest ono jedynie optimum lokalnym dalekim od rozwiązania optymalnego. Aby uniknąć tego problemu należy zadbać o losowość działania algorytmu np. poprzez dodanie mutacji oraz stosować techniki selekcji, które utrzymują zróżnicowaną populację. \par
+Czynnikami limitującymi stosowanie algorytmów genetycznych jest złożoność funkcji celu, która musi być wielokrotnie obliczana podczas wykonania algorytmu oraz rozmiar problemu do którego silni proporcjonalny jest rozmiar przestrzeni rozwiązań. \par
+Należy również pamiętać, że algorytmy genetyczne to metody przybliżone, co oznacza, że nie mamy pewności co do tego czy znalezione przez nas rozwiązanie jest optymalne, a nawet jeśli takie znaleźliśmy, to nie możemy tego stwierdzić. \par
+Stworzony przez nas algorytm podąża według następującego schematu: wczytujemy parametry algorytmu takie jak prawdopodobieństwo mutacji i rodzaj operatorów z pliku, później losowo generujemy bądź wczytujemy wcześniej wygenerowaną populację o okrelślonych rozmiarach. Następnie w pętli wykonujemy kolejno selekcji n rodziców z dotychczasowej populacji, następnie n razy wybieramy losowo dwóch rodziców, których krzyżujemy ze sobą. Ich potomków z pewnym prawdopodobieństwem mutujemy, a następnie korzystając z operatora sukcesji wybieramy osobników, którzy przechodzą do następnej populacji (kolejnej generacji). Pętlę zatrzymujemy po wykonaniu okrelślonej ilości iteracji, bądź gdy wartość najlepszego rozwiązania nie zmieni się przez określoną ilość iteracji. Schemat ten przedstawiamy poniżej w postaci pseudokodu:
 
-Algorytmy genetyczne wykorzystują mechanizmy zainspirowane ewolucją biologiczną takie jak krzyżowanie, mutacja czy selekcja. Przykładowe rozwiązanie problemu można skojarzyć z osobnikiem należącym do populacji (zbioru kilku rozwiązań). Funkcję celu można rozumieć jako miarę przystosowania danego osobnika - determinuje ona jakość rozwiązania. Populacja początkowa jest generowana losowo. Ewolucja populacji zachodzi po wielokrotnym stosowaniu wcześniej wymienionych mechanizmów. W efekcie z każdą generacją uzyskujemy coraz to lepiej przystosowaną populację (składającą sie z osobników o niższych wartościach funkcji celu).
-
-Potencjalnym problemem na jaki można się natknąć wykorzystując algorytm genetyczny jest zbyt szybkie osiąganie jednolitej populacji. Z jednej strony prowadzi to do szybkiego znalezienia rozwiązania, jednak najczęściej jest ono dalekie od optymalnego. Aby uniknąć tego problemu należy zadbać o losowość działania mechanizmów wpływających na populację. Większa losowość algorytmu wpływa na przeszukanie większej części przestrzeni rozwiązań co skutkuje większą szansą na znalezienie dobrego rozwiązania.
-
-Należy również pamiętać, że algorytmy genetyczne to metody przybliżone, co oznacza, że nie mamy pewności co do tego czy znalezione przez nas rozwiązanie jest optymalne, a nawet jeśli takie znaleźliśmy, to nie możemy tego stwierdzić. 
 \end{document}
