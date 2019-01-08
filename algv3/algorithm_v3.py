@@ -45,74 +45,61 @@ if __name__ == '__main__':
     else:
         succession_f = children_only
 
-    population_size = np.size(starting_population, 0)
-    permutation_size = np.size(starting_population, 1)
-    population = np.copy(starting_population)
-    best_solutions = np.zeros((iterations_limit, permutation_size))
-    worst_solutions = np.zeros((iterations_limit, permutation_size))
-    best_values = np.zeros((iterations_limit+1, 1))
-    worst_values = np.zeros((iterations_limit+1, 1))
-    global_best_values = np.zeros((iterations_limit+1, 1))
-    global_best_solutions = np.zeros((iterations_limit, permutation_size))
-    iteration_counter = 0
-    tolerance = 0
+population_size = np.size(starting_population, 0)
+permutation_size = np.size(starting_population, 1)
+population = np.copy(starting_population)
+best_solutions = np.zeros((iterations_limit, permutation_size))
+worst_solutions = np.zeros((iterations_limit, permutation_size))
+best_values = np.zeros((iterations_limit+1, 1))
+worst_values = np.zeros((iterations_limit+1, 1))
+iteration_counter = 0
+tolerance = 0
 
-    while iteration_counter < iterations_limit:
-        children = []
-        #SELECTION #SELECTION #SELECTION #SELECTION #SELECTION #SELECTION
-        parents = selection_f(population, 10, tournament_size, truncation_threshold, fit_fun)
-        print('--------------------\n iteration number', iteration_counter)
-        print('population size:', population_size)
-        print('parent count:', len(parents))
-        for i in range(int(number_of_parents)):
-            x, y = random.sample(range(len(parents)), 2)
-            child1, child2 = crossover_f(parents[x], parents[y])
-            children.append(child1)
-            children.append(child2)
-        print('children count:', len(children))
-        for i in range(len(children)):
-            #MUTATION #MUTATION #MUTATION #MUTATION #MUTATION #MUTATION
-            if random.random() < mutation_probability:
-                children[i] = mutation_f(children[i], percentage_of_change)
-        #SUCCESSION #SUCCESSION #SUCCESSION #SUCCESSION #SUCCESSION #SUCCESSION
-        population = succession_f(30, children, parents)
-        best_solutions[iteration_counter] = min(population, key=fit_fun)
-        worst_solutions[iteration_counter] = max(population, key=fit_fun)
-        best_values[iteration_counter] = int(fit_fun(best_solutions[iteration_counter].astype(int)))
-        worst_values[iteration_counter] = int(fit_fun(worst_solutions[iteration_counter].astype(int)))
-        population_size = np.size(population, 0)
-        #print(best_values[iteration_counter], best_values[iteration_counter-1])
-        if best_values[iteration_counter] == best_values[iteration_counter-1]:
-            tolerance += 1
-        else:
-            tolerance = 0
-        #print(tolerance)
-        if tolerance == 10:
-            print('Breaking after', iteration_counter, 'iterations')
-            break
-            #BREAKING POINT #BREAKING POINT #BREAKING POINT #BREAKING POINT #BREAKING POINT
-        iteration_counter += 1
+while iteration_counter < iterations_limit:
+    children = []
+    #SELECTION #SELECTION #SELECTION #SELECTION #SELECTION #SELECTION
+    parents = selection_f(population, 10, tournament_size, truncation_threshold, fit_fun)
+    print('--------------------\n iteration nr:', iteration_counter)
+    print('population size:', population_size)
+    print('parent count:', len(parents))
+    for i in range(int(number_of_parents)):
+        x, y = random.sample(range(len(parents)), 2)
+        child1, child2 = pmx(parents[x], parents[y])
+        children.append(child1)
+        children.append(child2)
+    print('children count', len(children))
+    for i in range(len(children)):
+        #MUTATION #MUTATION #MUTATION #MUTATION #MUTATION #MUTATION
+        if random.random() < mutation_probability:
+            children[i] = mutation_f(children[i], percentage_of_change)
+    #SUCCESSION #SUCCESSION #SUCCESSION #SUCCESSION #SUCCESSION #SUCCESSION
+    population = succession_f(30, children, parents)
+    best_solutions[iteration_counter] = min(population, key=fit_fun)
+    worst_solutions[iteration_counter] = max(population, key=fit_fun)
+    best_values[iteration_counter] = int(fit_fun(best_solutions[iteration_counter].astype(int)))
+    worst_values[iteration_counter] = int(fit_fun(worst_solutions[iteration_counter].astype(int)))
+    population_size = np.size(population, 0)
+    #print(best_values[iteration_counter], best_values[iteration_counter-1])
+    if best_values[iteration_counter] == best_values[iteration_counter-1]:
+        tolerance += 1
+    else:
+        tolerance = 0
+    #print(tolerance)
+    if tolerance == 10:
+        print('Breaking at: ', iteration_counter, 'iteration')
+        break
+        #BREAKING POINT #BREAKING POINT #BREAKING POINT #BREAKING POINT #BREAKING POINT
+    iteration_counter += 1
 #for i in range(0, iteration_counter):
-        #print(best_solutions[i].astype(int), int(fit_fun(best_solutions[i].astype(int))))
-    minimum = best_values[0]
-    global_best_values[0] = best_values[0]
-    for i in range(1, iteration_counter):
-        if best_values[i] < minimum:
-            minimum = best_values[i]
-        global_best_values[i] = minimum
-
-    global_best_solution = min(best_solutions[:iteration_counter].astype(int), key=fit_fun)
-    global_best_value = int(min(best_values[:iteration_counter]))
-    print('Best solution: ', global_best_solution, 'with value of: ', global_best_value)
-    x_axis_limit = np.arange(iteration_counter)
-    plt.plot(x_axis_limit, best_values[:iteration_counter], 'g', label='Najlepsze rozwiązania')
-    plt.plot(x_axis_limit, worst_values[:iteration_counter],'r', label='Najgorsze rozwiązania')
-    plt.plot(x_axis_limit, global_best_values[:iteration_counter], 'b', label='Globalnie najlepsze rozwiązania')
-    plt.yticks(np.arange(global_best_value, worst_values[0], step=50))
-    plt.xticks(np.arange(iteration_counter, step=int(iteration_counter/15)))
-    plt.xlabel('Numer iteracji')
-    plt.ylabel('Wartosc funkcji celu')
-    plt.title('Przebieg działania algorytmu')
-    plt.legend()
-    plt.show()
-
+    #print(best_solutions[i].astype(int), int(fit_fun(best_solutions[i].astype(int))))
+global_best_solution = min(best_solutions[:iteration_counter].astype(int), key=fit_fun)
+global_best_value = int(min(best_values[:iteration_counter]))
+print('Best solution: ', global_best_solution, 'with value of: ', global_best_value)
+x_axis_limit = np.arange(iteration_counter)
+plt.plot(x_axis_limit, best_values[:iteration_counter], 'g', label='Najlepsze wartości')
+plt.plot(x_axis_limit, worst_values[:iteration_counter],'r', label='Najgorsze wartości')
+plt.yticks(np.arange(global_best_value, worst_values[0], step=50))
+plt.xticks(np.arange(iteration_counter, step=int(iteration_counter/15)))
+plt.xlabel('Numer iteracji')
+plt.ylabel('Wartosc funkcji celu')
+plt.show()
