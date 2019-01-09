@@ -1,13 +1,14 @@
-transport_cost_matrix.csv; macierz kosztow transportu
-penalty_matrix.csv; macierz kary sasiedztwa
+36matrix2.csv; macierz kosztow transportu
+36matrix2.csv; macierz kary sasiedztwa
 first_population.csv; populacja poczatkowa
-tournament; rodzajs selekcji - proportionate, tournament, truncation
-pmx; operator krzyzowania - pmx, ox, ox_pmx
-0.15; prawdopodobienstwo mutacji
+truncation; rodzaj selekcji - (proportionate, tournament, truncation)
+ox; operator krzyzowania - (pmx, ox)
+0.25; prawdopodobienstwo mutacji
 0.3; procentowy wplyw mutacji na rozwiazanie
-swap; operator mutacji - swap, inversion, scramble
-distance_matrix.csv; macierz odleglosci
-20; limit iteracji
-2; ilość rodziców
-3; wielkość turnieju
-5; procentowy próg rankingowy
+swap; operator mutacji - (swap, inversion, scramble)
+36matrix1.csv; macierz odleglosci
+700; limit iteracji
+30; ilość rodziców
+20; wielkość turnieju
+30; procentowy próg rankingowy
+mixed; metoda sukcesji - children_only, mixed

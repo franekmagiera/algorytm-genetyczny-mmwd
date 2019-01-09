@@ -1,8 +1,0 @@
-﻿TODO:
- - selekcja rankingowa
- - selekcja turniejowa
- - selekcja truncation
- - testy i analiza algorytmu dla roznych parametrow
- - sprawozdanie
- - dokumentacja (README)
- - ...

@@ -1,8 +1,9 @@
 # skrypt wczytuje dane dla danego problemu z pliku 'input_data'
-from types_definitions import Selection_type
-from types_definitions import Crossover_type
-from types_definitions import Mutation_type
+from types_definitions import SelectionType
+from types_definitions import CrossoverType
+from types_definitions import MutationType, SuccessionType
 import numpy as np
+
 
 def read_matrix(file_path):
     """Wczytuje macierz zadana w pliku csv"""
@@ -39,30 +40,32 @@ if len(penalty_matrix) != rows or len(penalty_matrix[0]) != columns:
 starting_population = read_matrix(data[2])
 
 if data[3] == 'proportionate':
-    selection_method = Selection_type.PROPORTIONATE
-elif data[3] == 'ranking':
-    selection_method = Selection_type.RANKING
-elif data[3] == 'tournament':
-    selection_method = Selection_type.TOURNAMENT
+    selection_method = SelectionType.PROPORTIONATE
+elif data[3] == 'truncation':
+    selection_method = SelectionType.TRUNCATION
 else:
-    selection_method = Selection_type.TRUNCATION
+    selection_method = SelectionType.TOURNAMENT
 
 if data[4] == 'ox':
-    crossover_operator = Crossover_type.OX
-elif data[4] == 'pmx':
-    crossover_operator = Crossover_type.PMX
-else:
-    crossover_operator = Crossover_type.OX_PMX
+    crossover_operator = CrossoverType.OX
+else :
+    crossover_operator = CrossoverType.PMX
 
 mutation_probability = float(data[5])
 percentage_of_change = float(data[6])
 
-if data[7] == 'swap':
-    mutation_operator = Mutation_type.SWAP
+if data[7] == 'scramble':
+    mutation_operator = MutationType.SCRAMBLE
 elif data[7] == 'inversion':
-    mutation_operator = Mutation_type.INVERSION
+    mutation_operator = MutationType.INVERSION
 else:
-    mutation_operator = Mutation_type.SCRAMBLE
+    mutation_operator = MutationType.SWAP
+
+if data[13] == 'mixed':
+    succession_method = SuccessionType.MIXED
+else:
+    succession_method = SuccessionType.CHILDREN_ONLY
+
 
 distance_matrix = read_matrix(data[8])
 
@@ -90,5 +93,4 @@ if __name__ == '__main__':
     print(number_of_parents)
     print(tournament_size)
     print(truncation_threshold)
-
 

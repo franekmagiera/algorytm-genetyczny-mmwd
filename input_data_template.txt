@@ -11,3 +11,4 @@
 ; ilość rodziców
 ; wielkość turnieju
 ; procentowy próg rankingowy
+; metoda sukcesji

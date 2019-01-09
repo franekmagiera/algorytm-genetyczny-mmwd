@@ -1,20 +1,25 @@
 from enum import Enum, auto
 
 
-class Selection_type(Enum):
+class SelectionType(Enum):
     PROPORTIONATE = auto()
     TOURNAMENT = auto()
     TRUNCATION = auto()
 
 
-class Crossover_type(Enum):
+class CrossoverType(Enum):
     OX = auto()
     PMX = auto()
     OX_PMX = auto()
 
 
-class Mutation_type(Enum):
+class MutationType(Enum):
     SWAP = auto()
     INVERSION = auto()
     SCRAMBLE = auto()
+
+
+class SuccessionType(Enum):
+    CHILDREN_ONLY = auto()
+    MIXED = auto()
 
