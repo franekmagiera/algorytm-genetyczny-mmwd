@@ -36,3 +36,6 @@ Opis poszczególnych funkcji:
 	Lista rodziców jest dołączana do listy potomków, następnie losowo przestawiana. Zadana liczba rozwiązań trafia do populacji. Jako argumenty funkcja przyjmuje rozmiar nowej populacji, listę potomków oraz listę rodziców. Funkcja zwraca nową populację.
 
 Operatory znajdujące się w jednym pliku przyjmują takie same argumenty, jednak niektóre z nich nie są potrzebne danemu operatorowi. Zdecydowaliśmy się na takie rozwiązanie, aby móc łatwo wykorzystywać skrypt algorithm_v3.py dla różnych parametrów algorytmu. Ponadto w pliku input_data.txt powinniśmy wypełnić wszystkie pola, mimo że czasami niektóre z nich nie będą potrzebne (np. procentowy wpływ mutacji nie jest konieczny aby poprawnie wykonać swap, ale mimo to musimy jakąś wartość przesłać, może być równa 0, aby program zadziałał).
+
+Przykładowy przebieg działania algorytmu:
+![Przykładowy przebieg działania algorytmu](https://raw.githubusercontent.com/franekmagiera/algorytm-genetyczny-mmwd/master/przyklad1.png)
