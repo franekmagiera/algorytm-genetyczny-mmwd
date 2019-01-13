@@ -19,7 +19,7 @@ def save_population_to_file(population, filename):
     return
 
 if __name__ == '__main__':
-    population = generate_new_population(25,36)
+    population = generate_new_population(100,36)
     #print(population)
     save_population_to_file(population, 'first_population.csv')
 
