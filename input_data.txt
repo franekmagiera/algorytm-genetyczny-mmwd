@@ -5,7 +5,7 @@ proportionate; rodzaj selekcji - (proportionate, tournament, truncation)
 pmx; operator krzyzowania - (pmx, ox)
 0.33; prawdopodobienstwo mutacji
 0.3; procentowy wplyw mutacji na rozwiazanie
-swap; operator mutacji - (swap, inversion, scramble)
+scramble; operator mutacji - (swap, inversion, scramble)
 36matrix1.csv; macierz odleglosci
 3000; limit iteracji
 100; ilość rodziców
